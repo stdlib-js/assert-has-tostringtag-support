@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/assert-has-tostringtag-support",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Detect native Symbol.toStringTag support.",
   "license": "Apache-2.0",
   "author": {
