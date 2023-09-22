@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import hasToStringTagSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-tostringtag-support@esm/index.mjs';
+import hasToStringTagSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-tostringtag-support@v0.1.0-esm/index.mjs';
 ```
 
 #### hasToStringTagSupport()
@@ -70,7 +70,7 @@ var bool = hasToStringTagSupport();
 <body>
 <script type="module">
 
-import hasToStringTagSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-tostringtag-support@esm/index.mjs';
+import hasToStringTagSupport from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-has-tostringtag-support@v0.1.0-esm/index.mjs';
 
 var bool = hasToStringTagSupport();
 if ( bool ) {
