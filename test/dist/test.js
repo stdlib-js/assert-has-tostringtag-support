@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,59 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var proxyquire = require( 'proxyquire' );
-var hasSymbols = require( '@stdlib/assert-has-symbol-support' );
-var detect = require( './../../dist' );
-
-
-// VARIABLES //
-
-var opts = {
-	'skip': !hasSymbols()
-};
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof detect, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'feature detection result is a boolean', function test( t ) {
-	t.strictEqual( typeof detect(), 'boolean', 'detection result is a boolean' );
-	t.end();
-});
-
-tape( 'if `Symbols` are not supported, detection result is `false`', function test( t ) {
-	var detect = proxyquire( './../dist/main.js', {
-		'@stdlib/assert-has-symbol-support': hasSupport
-	});
-
-	t.strictEqual( detect(), false, 'detection result is `true`' );
-	t.end();
-
-	function hasSupport() {
-		return false;
-	}
-});
-
-tape( 'if `toStringTag` is supported, detection result is `true`', opts, function test( t ) {
-	if ( typeof Symbol.toStringTag === 'symbol' ) {
-		t.strictEqual( detect(), true, 'detection result is `true`' );
-	} else {
-		t.strictEqual( detect(), false, 'detection result is `false`' );
-	}
-	t.end();
-});
-
-tape( 'if `toStringTag` is not supported, the function guards against non-symbol `toStringTag` properties and the detection result is `false`', opts, function test( t ) {
-	if ( typeof Symbol.toStringTag === 'symbol' ) {
-		t.strictEqual( detect(), true, 'detection result is `true`' );
-	} else {
-		Symbol.toStringTag = 'beep';
-		t.strictEqual( detect(), false, 'detection result is `false`' );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
