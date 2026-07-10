@@ -1,5 +1,5 @@
-"use strict";var s=function(o,r){return function(){return r||o((r={exports:{}}).exports,r),r.exports}};var e=s(function(S,t){
-var a=require('@stdlib/assert-has-symbol-support/dist'),i=a();function u(){return i&&typeof Symbol.toStringTag=="symbol"}t.exports=u
-});var n=e();module.exports=n;
+"use strict";var a=function(o,r){return function(){try{return r||o((r={exports:{}}).exports,r),r.exports}catch(s){throw (r=0, s)}};};var e=a(function(g,t){
+var i=require('@stdlib/assert-has-symbol-support/dist'),u=i();function n(){return u&&typeof Symbol.toStringTag=="symbol"}t.exports=n
+});var p=e();module.exports=p;
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
